@@ -2,7 +2,7 @@ import React from'react';
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../../context/global-context.js";
 import NextButton from '../../button/Next';
-import FieldEmail from '../../field/FieldEmail.js';
+import Field from '../../field/Field.js';
 import './StepEmail.css'
 
 
@@ -32,8 +32,8 @@ const { next } = navigation;
                 </div>
                 <h3 className='step-email__title'>Registration</h3>
                 <p className='step-email__subtitle'>Already a member?<span className='step-email__subtitle__color'> Log in</span></p>
-                <FieldEmail  onChange={(e) => setEmail(e.target.value)}/>
-                <NextButton onClick={submitForm}/>
+                <Field  onChange={(e) => setEmail(e.target.value)} info='Email' placeholder='Enter your E-Mail'/>
+                <NextButton onClick={submitForm} info='Next'/>
                 <p className='step-text'>Continuing with Email, you agree to the<span className='step-text__color'>Terms of Use</span>  and <span className='step-text__color' >Privacy Policy</span>.</p>
                 
             </div>

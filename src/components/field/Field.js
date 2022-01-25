@@ -6,7 +6,7 @@ import './Field.css'
 
 
 
-const FieldEmail= (props) => {
+const Field= (props) => {
   const{onChange} = props;
   const[email, setEmail] = useState('')    
   const[emailError, setEmailError] = useState('')
@@ -27,16 +27,14 @@ const FieldEmail= (props) => {
     return(
       <form action="#">
       <label class='text-field'>
-        <input  class="text-field__input" placeholder="Enter your E-Mail" value={email} onChange={e => emailHandler(e)}  value={email} onChange={e => emailHandler(e)}  
+        <input  class="text-field__input" placeholder={props.placeholder} value={email} onChange={e => emailHandler(e)}  value={email} onChange={e => emailHandler(e)}  
                                                                        onChange={onChange}
                                                                           type="text" id="email" name="email"/>
-        <span class="text-field__label">
-          E-Mail
-        </span>
+        <span class="text-field__label">{props.info}</span>
         {emailError && <div className='input__error'>{emailError}</div>}
       </label>
     </form>
     );
 }
 
-export default FieldEmail;
+export default Field;

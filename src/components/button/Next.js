@@ -9,7 +9,7 @@ import arrow from '../../../src/image/VectorArrow.svg'
 const NextButton = (props) => {
     const {onclick} =props;
     return(
-        <button className='next-button' >Next
+        <button className='next-button' >{props.info}
             <img className='next-buttom-img' src={arrow} onClick={onclick}/> 
         </button>
     );

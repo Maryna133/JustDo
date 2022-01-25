@@ -4,7 +4,7 @@ import { GlobalContext } from "../../../context/global-context.js";
 import NextButton from '../../button/Next';
 import PrevButton from '../../button/PrevButton.js'
 import './StepPassword.css'
-import FieldPassword from '../../field/FieldPassword.js';
+import Field from '../../field/Field.js';
 
 
 
@@ -34,10 +34,10 @@ const StepPassword = (navigation) => {
                     <div className='step-circle opacity'></div>
                 </div>
                 <h3 className='step-password__title'>Almost done</h3>
-                <FieldPassword onChange={(e) => setPassword(e.target.value)} />
-                <FieldPassword onChange={(e) => setPassword(e.target.value)}/>
-                <PrevButton onClick={submitForm}/>
-                <NextButton className='step-button' />       
+                <Field onChange={(e) => setPassword(e.target.value)} info='Password' placeholder='Enter your password'/>
+                <Field onChange={(e) => setPassword(e.target.value)} info='Password Confirmation' placeholder='Enter your password'/>
+                <PrevButton />
+                <NextButton className='step-button' onClick={submitForm} />       
                 
             </div>
     );
