@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/circe-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/Circe-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+
+}
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/Circe-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+.home-header{
+    display: flex;
+    flex-direction: row;
+   
+}
+.home-container{
+    
+    max-width: 1920px;
+    position: absolute;
+}
+
+
+.home-section{
+    padding: 95px 325px ;
+    display: flex;
+    flex-direction: row;
+}
+
+.justgo-info__img{
+    padding: 160px 0 50px 194px;
+}
+
+.header-button{
+    margin-top: 50px;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.justgo-info__title{
+    width: 485px;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 99.9%;
+    color: #000850;
+}
+.justgo-info__title___color{
+    color:#E44233;
+}
+
+.justgo-info__button{
+    margin-top: 45px;
+    padding: 8px 22px;
+    background: #03A0E8;
+    border-radius: 10px;
+    border: 1px solid #03A0E8;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+}

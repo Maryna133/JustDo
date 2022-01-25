@@ -1,0 +1,30 @@
+@media screen and (max-width:768px) {
+ 
+    .blur{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #000322;
+        opacity: 0.2;
+    }
+    .justgo-info__img{
+        display: none;
+    }
+
+    .home-section{
+        display: flex;
+        flex-direction: column;
+        padding-left: 85px;
+    }
+
+    .justgo-info__title{
+        padding-left: 140px;
+    }
+
+    .justgo-info__button{
+        margin-left: 350px;
+    }
+    .header-button{
+        padding-left: 460px;
+    }
+}

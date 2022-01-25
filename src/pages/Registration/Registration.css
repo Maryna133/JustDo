@@ -1,0 +1,37 @@
+.registration{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(250, 250, 250, 0.89);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.1s;
+    pointer-events: none;
+}
+.registration.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.registration-container{
+    background: #fff;
+    border-radius: 20px;
+    width: 1016px;
+
+    box-shadow: 0px 21px 54px rgba(44, 45, 67, 0.09);
+}
+
+.registration-button{
+    padding: 33px 0px 33px 965px; 
+}
+.registration-content__img{
+    padding-left: 30px;
+}
+
+.registration-content{
+    display: flex;
+    flex-direction: row;
+}

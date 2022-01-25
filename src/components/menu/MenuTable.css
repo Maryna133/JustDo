@@ -1,0 +1,30 @@
+@media screen and (max-width:768px){
+.header-decstop{
+    display: none;
+}
+
+.header-table{
+    max-width: 280px;
+    max-height: 100vh;
+    padding: 45px 0px 0px 25px;
+    background: #2226d2;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+.header-navigation{
+    padding-top:50px; 
+}
+
+.header-list{
+ 
+    display: flex;
+    flex-direction: column;
+}
+
+.header-list__item{
+   padding-bottom: 20px ;
+}
+}
+
