@@ -1,31 +1,47 @@
 import React from'react';
 import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
 import { GlobalContext } from "../../../context/global-context.js";
 import NextButton from '../../button/Next';
 import PrevButton from '../../button/PrevButton.js'
 import './StepPassword.css'
-import Field from '../../field/Field.js';
 
 
 
 
 
-const StepPassword = (navigation) => {
+
+const StepPassword = ({setStep}) => {
    
-    const { next } = navigation;
+   
     const [state, dispatch] = useContext(GlobalContext);
     const [password, setPassword] = useState(state.password || "");
   
-    const submitForm = () => {
-      if (password === "") return;
+    const {
+      register,
+      formState: { errors }
+    } = useForm();
   
+  
+    const submitForm = () => {
       dispatch({
         type: "SAVE_PASSWORD",
         password: password
       });
-      next();
+      setStep(2);
     };
+
     
+    const prevForm = () => {
+      dispatch({
+        type: "SAVE_PASSWORD",
+        password: password
+      });
+      setStep(3);
+    };
+
+
+  
     return(
             <div className='step-password'>
                 <div className='step'>
@@ -34,10 +50,34 @@ const StepPassword = (navigation) => {
                     <div className='step-circle opacity'></div>
                 </div>
                 <h3 className='step-password__title'>Almost done</h3>
-                <Field onChange={(e) => setPassword(e.target.value)} info='Password' placeholder='Enter your password'/>
-                <Field onChange={(e) => setPassword(e.target.value)} info='Password Confirmation' placeholder='Enter your password'/>
-                <PrevButton />
-                <NextButton className='step-button' onClick={submitForm} />       
+                <form >
+                  <label class='text-field'>
+                      <input  class="text-field__input" placeholder="Enter your password"
+                          {...register("password", {
+                              required: true,
+                              pattern: /^[A-Z0-9._!&@]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                          })}
+                      /> {errors?.email?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                            )}
+                      <span class="text-field__label">Password</span>
+                    </label> 
+                </form>
+                <form >
+                  <label class='text-field'>
+                    <input  class="text-field__input" placeholder="Enter your password"
+                      {...register("password", {
+                        required: true,
+                        pattern: /^[A-Z0-9._!&@]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                     })}
+                    /> {errors?.email?.type === "pattern" && (
+                    <p>Alphabetical characters only</p>
+                    )}
+                    <span class="text-field__label">Password Confirmation</span>
+                  </label> 
+                </form>
+                <PrevButton onClick={prevForm} />
+                <NextButton className='step-button' info='Next'  onClick={submitForm}/>       
                 
             </div>
     );

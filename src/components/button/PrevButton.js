@@ -6,9 +6,9 @@ import arrow from '../../../src/image/arrow.svg'
 
 
 
-const PrevButton = () => {
+const PrevButton = (props) => {
     return(
-        <button className='prev-button'>
+        <button className='prev-button' onClick={props.onClick}>
             <img className='prev-buttom-img' src={arrow}/> 
         </button>
     );

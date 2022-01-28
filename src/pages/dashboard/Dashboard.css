@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/circe-regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/Circe-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+
+}
+@font-face {
+    font-family: 'Circe';
+    src: url('../../../src/fonts/Circe-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+.page-container{
+    max-width: 1920px;
+    height: 100vh;
+    background: #F7F8FA;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-container{
+   width: 280px;
+    height: 100vh;
+    padding:  40px  0px  0px 20px;
+    background: #FFFFFF;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.sidebar-logo{
+
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-title{
+    padding-left: 25px;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    color: #03A0E8;
+}
+
+.sidebar-title{
+    text-transform: uppercase;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #6F7D97;
+
+}
+
+.sidebar-category, .sidebar-tags{
+    padding-top: 40px;
+    padding-bottom: 150px;
+    border-bottom: 1px solid #D7D7D7;
+    width: 232px;
+}
+
+.sidebar-tags{
+    padding-top: 25px;
+    border-bottom: none;  
+}

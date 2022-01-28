@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-setting{
+  position: absolute;
+  top: 70%;
+
+}
+.sidebar-profile{  
+ 
+    display: flex;
+    flex-direction: row;
+    font-family: Circe;
+    font-style: normal;
+    font-weight: normal;
+    color: #000850;
+}
+
+.setting-content{
+    position:relative;
+    top: -15em;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 15px rgba(44, 45, 67, 0.09);
+    border-radius: 10px;
+    padding: 0 14px 14px 14px ;
+}
+
+ .profile{
+    border-bottom: 1px solid #D7D7D7;
+    width: 230px;
+}
+
+.setting-item{
+    display: flex;
+    flex-direction: row; 
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 12px;
+}
+
+.sidebar-profile__info{
+    padding-left: 10px;
+}
+.sidebar-profile__img{
+    max-width: 44px;
+    max-height: 44px;
+    
+}
+
+.sidebar-profile__info .email{
+    color: #6F7D97;
+    font-size: 16px;
+
+}
+
+.setting-img{
+    padding-right: 12px;
+}

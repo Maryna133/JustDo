@@ -13,7 +13,7 @@ import Registration from '../Registration/Registration';
 const Home = () => {
     const [registrationActive, setRegistrationActive] = useState(false)
     return(
-        <div className='home-container'>
+   <div className='home-container'>
         <div className='blur'/>
             <header className='home-header'>
             <img  className='header-burger' src={burger} alt='burger'/>
@@ -23,7 +23,8 @@ const Home = () => {
                 <div className='header-button'>
                         <button className='header-button__registration' onClick={() =>setRegistrationActive(true) }>Registration</button>
                         <button className='header-button__login'>Log in</button>
-                        <Registration active={registrationActive} setActive={setRegistrationActive}/>
+                      <Registration active={registrationActive} setActive={setRegistrationActive}/>
+                       
                 </div>
             </header>
       
@@ -37,7 +38,7 @@ const Home = () => {
             </div>
 
         </div>
-  
+
     );
 }
 

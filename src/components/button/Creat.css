@@ -1,0 +1,18 @@
+.creat-button{
+    margin-top: 5px;
+    width: 167px;
+    height: 43px;
+    background: #03A0E8;
+    border-radius: 10px;
+    border: 1px solid #03A0E8;
+    font-family: 'Circe';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.creat-buttom__img{
+    margin-left: 15px;
+}

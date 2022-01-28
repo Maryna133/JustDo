@@ -10,8 +10,9 @@
 
 }
 .text-field__input {
+   
     padding: 13px 20px;
-    width: 90%;
+    width: 83%;
     border-radius: 10px;
     border: 1px solid #D7D7D7;
     font: inherit;
